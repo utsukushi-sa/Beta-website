@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
-    <link rel="stylesheet" href="stijl.css">
-    <link rel="icon" href="/media/world-globe-icon.png">
+    <link rel="stylesheet" href="contact.css">
+
 </head>
-
 <body>
- <header>
-      <ul class="nav">
-        <li><a href="index.html">index</a></li>
-        <li><a href="kappen.html">kappen </a></li>
-        <li><a href="stuur.html">stuur</a></li>
-        <li><a href="onderhoud.html">onderhoud</a></li>
-        <li><a href="kleine details.html">kleine details</a></li>
-        <li><a href="fun.html">fun</a></li>
-        <li><a class="active" href="contact.html">contact</a></li>
-    </ul>
- </header>
-    <main>
-        <h1>contact</h1>
-        <section>
-            <h2>neem contact met on op</h2>
-            <form action="https://dev.infobeheer.be/form.php">
-                <label for="naam">naam:</label>
-                <input type="text" id="naam" name="naam">
-                <br>
-                <label for="E-mailadres">E-mailadres:</label>
-                <input type="email" id="email" name="email" required>
-                <br><label for="onderwerp">onderwerp:</label>
-                <input type="onderwerp" id="onderwerp" name="onderwerp">
-                <br><label for="bericht">bericht:</label>
-               <input type="textarea" id="textarea" name="textarea" required>
-                <br><label for="intresses"> ik heb intresse in:</label>
-                <select name="intresses" id="bestemming" required><br>
-                    <option value="">Parijs</option>
-                    <option value="New York">New York</option>
-                    <option value="Tokyo">Tokyo</option>
-                </select>
-                <br>
-                <input type="checkbox" id="toestemming" name="toestemming">
-                <label for="toestemming"> ik geef toestemming om mijn gegevens te verwerken</label>
-                <br>
-                <input type="submit">
-            </form>
-        </section>
-        <footer>
-            <p>© 2024 Ontworpen door Kyan Stuyts</p>
-        </footer>
-    </main>
-</body>
+    <!--navigatie-->
+  <ul class="nav">
+    <li><a href="index.html">index</a></li>
+    <li><a href="kappen.html">kappen </a></li>
+    <li><a href="stuur.html">stuur</a></li>
+    <li><a href="onderhoud.html">onderhoud</a></li>
+    <li><a href="kleine details.html">kleine details</a></li>
+    <li><a href="fun.html">fun</a></li>
+    <li><a class="active" href="contact.html">contact</a></li>
+  </ul>
 
+
+
+    <form action="https://formspree.io/f/mblkrvko" method="POST">
+  <input type="text" name="voornaam" placeholder="Voornaam" required>
+  <input type="text" name="achternaam" placeholder="Achternaam" required>
+  <input type="email" name="email" placeholder="E-mailadres" required>
+  <input type="tel" name="telefoon" placeholder="Telefoonnummer">
+
+  <textarea name="feedback" rows="6" placeholder="Wat is er mis met de website?" required></textarea>
+
+  <input type="hidden" name="_next" value="https://utsukushi-sa.github.io/Beta-website/bedankt.html">
+
+  <button type="submit">Verzenden</button>
+</form>
+
+</body>
 </html>

@@ -252,3 +252,200 @@ input[type="submit"]:hover {
     background-color: #ff35cc;
 }
 */
+/* 
+* NAAM: Kyan Stuyts
+* KLAS: 5ADB
+*/
+
+/* Algemene opmaak */
+
+body {
+    font-family:sans-serif 12pt;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #a30444;
+}
+
+h2 {
+    color: #a30444;
+}
+
+header {
+    padding-top: 10;
+    padding-bottom: 10;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+footer {
+    text-align: center;
+    padding-top: 10;
+    padding-bottom: 10;
+    color: white;
+    background-color: #a30444;
+}
+
+.accent {
+    background-color: #fc0668;
+    color: white;
+    padding-left: 10;
+    width: 100px;
+    height: auto;
+    float: left;
+    padding: 2px 2px 5px;
+    margin-right: 10px;
+
+}
+
+.underline {
+    text-decoration: underline;
+    padding-right: 10px;
+    margin: 10px 2px 2px;
+    padding: 2px 2px 2px;
+}
+
+#homeTable {
+    margin: auto;
+    width: 90%;
+}
+
+.homeLink {
+    font-size: 28pt;
+    text-transform: uppercase;
+
+}
+
+.afb-parijs {
+    border-radius: 15px;
+    height: 250px;
+
+    opacity: 0.5;
+    border-style: ridge;
+    border-color: #a30444;
+    float: left;
+    border-radius: 15px;
+    padding-bottom: 15px;
+
+}
+
+.parijs-indoor {
+    list-style-type:lower-alpha;
+}
+
+
+.afb-parijs :hover {
+    border-color: blue;
+    opacity: 1;
+}
+
+/* Hyperlinks */
+
+
+
+
+/* Navigatie */
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a30444;
+}
+
+.nav-menu li {
+    float: left;
+}
+
+.nav-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+
+.nav-menu li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.nav-menu .active {
+    background-color: #eb5c95;
+}
+
+
+
+
+
+/*  Meegeleverde stijlen */
+/*
+    Hieronder staan de stijlen die meegeleverd zijn.
+    Gelieve NIETS hieronder aan te vullen of te wijzigen.
+*/
+main {
+    padding: 20px;
+}
+
+section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Formulierstijl */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"],
+input[type="submit"] {
+    background-color: #fc0668;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #ff35cc;
+}
