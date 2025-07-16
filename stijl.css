@@ -34,12 +34,12 @@
 
 .property-details a {
     text-decoration: none;
-    
+
 }
 
 .property-details a:hover {
     text-decoration: underline;
-    
+
 }
 
 
@@ -47,7 +47,6 @@
 /*semantishe tags*/
 /*stijl bottom credits*/
 footer>div {
-    display: flexbox;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: rgb(197, 7, 7);
@@ -55,8 +54,8 @@ footer>div {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    
-    
+
+
 }
 
 aside {
@@ -183,22 +182,8 @@ img {
     left: -2px;
     color: #f4f4f4;
     background-color: red;
+}
 
-}
-/*
-@media (max-width:900px) {
-    header{
-        flex-direction:column ;
-    }
-    main{
-       width: 90%;
-      min-height: 0; 
-    }
-    footer{
-        min-height: 0;
-    }
-}
-*/
 @media (max-width: 900px) {
     body {
         font-size: 16px;
@@ -249,7 +234,7 @@ img {
         margin-top: 10px;
     }
 
-    footer > div {
+    footer>div {
         flex-wrap: wrap;
         text-align: center;
         font-size: 14px;

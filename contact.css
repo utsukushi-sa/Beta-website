@@ -10,10 +10,12 @@ form {
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1.25rem;
@@ -43,51 +45,51 @@ button:hover {
 
 /* Navigatie */
 .nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #e67e22;
-    z-index: 1;
-    position: sticky;
-    top: 0;
-    left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e67e22;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .nav li {
-    float: left;
+  float: left;
 }
 
 .nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    background-color: #e67e22;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #e67e22;
 }
 
 .nav li a:hover:not(.active) {
-    background-color: #d35400;
+  background-color: #d35400;
 }
 
 .nav .active {
-    background-color: #a04000;
+  background-color: #a04000;
 }
 
 
 footer>div {
-    display: flexbox;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: rgb(197, 7, 7);
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-    
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(197, 7, 7);
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
 }
+
 @media (max-width: 900px) {
   body {
     padding: 1rem;
@@ -98,7 +100,9 @@ footer>div {
     padding: 1rem;
   }
 
-  input, textarea, button {
+  input,
+  textarea,
+  button {
     font-size: 1rem;
     padding: 0.65rem;
   }
@@ -119,7 +123,7 @@ footer>div {
     font-size: 1rem;
   }
 
-  footer > div {
+  footer>div {
     display: block;
     text-align: center;
     font-size: 14px;
