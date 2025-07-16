@@ -88,3 +88,41 @@ footer>div {
     
     
 }
+@media (max-width: 900px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  input, textarea, button {
+    font-size: 1rem;
+    padding: 0.65rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav li {
+    float: none;
+    width: 100%;
+  }
+
+  .nav li a {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer > div {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}

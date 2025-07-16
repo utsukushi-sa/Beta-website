@@ -185,4 +185,74 @@ img {
     background-color: red;
 
 }
+/*
+@media (max-width:900px) {
+    header{
+        flex-direction:column ;
+    }
+    main{
+       width: 90%;
+      min-height: 0; 
+    }
+    footer{
+        min-height: 0;
+    }
+}
+*/
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
 
+    header {
+        flex-direction: column;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .property {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .property img {
+        float: none;
+        margin: 0 0 15px 0;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .property-details {
+        text-align: center;
+        padding: 0;
+    }
+
+    .price {
+        position: static;
+        margin-top: 10px;
+    }
+
+    footer > div {
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
