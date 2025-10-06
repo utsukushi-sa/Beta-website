@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>onderdelen/mods-beta</title>
         <link rel="stylesheet" href="stijl.css">
-        <!--><link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
 </head>
 
 <body>
