@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onderhoud Beta</title>
+    <link rel="stylesheet" href="stijl.css">
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+</head>
+
+<body>
+
+
+    <header>
+        <ul class="nav">
+            <li><a href="index.html">main parts</a></li>
+            <li><a href="kappen.html">kappen </a></li>
+            <li><a href="stuur.html">stuur</a></li>
+            <li><a class="active" href="onderhoud.html">onderhoud</a></li>
+            <li><a href="kleine-details.html">kleine details</a></li>
+            <li><a href="fun.html">fun</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Basis info</h1>
+        <p>Een 2 takt schakelbrommer heeft voortdurend onder houd nodig dit houd in <strong>olie, keting,
+                bougie</strong>
+            hieronder vind je de basis </p>
+
+        <div class="container">
+            <h1>Olie</h1>
+            <p>Olie is belangerijk hier enkele plekken om het te kopen</p>
+        </div>
+
+
+
+
+
+
+        <div class="container">
+            <div class="property">
+                <a href="https://www.bol.com/be/nl/p/6-stuks-castrol-power-rs-2t-volsyntetische-2-takt-olie-1-liter/9300000173728221/?s2a=&bltgh=qlcBOz3erh01ZGumOB1B5w.4_47_48.49.FeatureOptionButton#productTitle"
+                    target="_blank"><img src="images/castrol-olie-bol.jpg" alt="castrol olie 6 pak"></a>
+                <div class="label">olie</div>
+                <div class="property-details">
+                    <h2>Castrol olie 2t power rs</h2>
+                    <p>Deze olie is goed voor de Beta rr50 modelen en gaat per liter circa 500km mee.
+                        deze olie komt van <a
+                            href="https://www.bol.com/be/nl/p/6-stuks-castrol-power-rs-2t-volsyntetische-2-takt-olie-1-liter/9300000173728221/?s2a=&bltgh=qlcBOz3erh01ZGumOB1B5w.4_47_48.49.FeatureOptionButton#productTitle"
+                            target="_blank"> <strong>Bol.com</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 63,45</div>
+            </div>
+
+
+
+            <div class="property">
+                <a href="https://www.ezrider.nl/castrol-power-rs-2t-volsyntetische-2-takt-olie-1-liter-6-stuks-aanbieding/?utm_source=google&utm_medium=cpc&utm_campaign=P.Max%20Algemene%20campagne%20(Aanpoters)&utm_term=&utm_content=|&utm_id=22318486536&gad_source=1&gad_campaignid=22324925228&gbraid=0AAAAABQHpXQyhYnms4J6k3SD5nuuiekQ7&gclid=CjwKCAjwyb3DBhBlEiwAqZLe5IC2Q68NklHhFumLPu5bANrsM8Kcteh8T3qUuPpaCFwlA1TwaRU2thoCfqkQAvD_BwE"
+                    target="_blank"><img src="images/castrol-olie-bol.jpg" alt="castrol olie 6 pak"></a>
+                <div class="label">olie</div>
+                <div class="property-details">
+                    <h2>Castrol olie 2t power rs</h2>
+                    <p>Deze olie is goed voor de Beta rr50 modelen en gaat per liter circa 500km mee.
+                        deze olie komt van <a
+                            href="https://www.ezrider.nl/castrol-power-rs-2t-volsyntetische-2-takt-olie-1-liter-6-stuks-aanbieding/?utm_source=google&utm_medium=cpc&utm_campaign=P.Max%20Algemene%20campagne%20(Aanpoters)&utm_term=&utm_content=|&utm_id=22318486536&gad_source=1&gad_campaignid=22324925228&gbraid=0AAAAABQHpXQyhYnms4J6k3SD5nuuiekQ7&gclid=CjwKCAjwyb3DBhBlEiwAqZLe5IC2Q68NklHhFumLPu5bANrsM8Kcteh8T3qUuPpaCFwlA1TwaRU2thoCfqkQAvD_BwE"
+                            target="_blank"> <strong>ezrider.nl</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 65,70</div>
+            </div>
+
+
+
+
+            <div class="property">
+                <a href="https://www.k-parts.nl/olie-castrol-2-takt" target="_blank"><img
+                        src="images/castrol-olie-k-parts.jpeg" alt="castrol olie 6 pak"></a>
+                <div class="label">olie</div>
+                <div class="property-details">
+                    <h2>Castrol olie 2t power rs</h2>
+                    <p>Deze olie is goed voor de Beta rr50 modelen en gaat per liter circa 500km mee.
+                        deze olie komt van <a href="https://www.k-parts.nl/olie-castrol-2-takt"
+                            target="_blank"><strong>k-parts.nl</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 11,39</div>
+            </div>
+
+
+        </div>
+
+        <div class="container">
+            <h1>slijtagedelen</h1>
+            <p>Somige delen slijten na tijdje rijden zoal ketting, remmen en tandwielen </p>
+        </div>
+
+        <div class="container">
+            <div class="property">
+                <a href="https://www.ezrider.nl/ketting-afam-premium-420m-x-140-zwart/" target="_blank"><img
+                        src="images/ketting-beta-140-links.jpg" alt="castrol olie 6 pak"></a>
+                <div class="label">Ketting</div>
+                <div class="property-details">
+                    <h2>Ketting 140 links</h2>
+                    <p>De ketting moet op 5000km vervangen worden en telkens om de 5000km opnieuw (foute keting moet 138
+                        links zijn).<a href="https://www.ezrider.nl/ketting-afam-premium-420m-x-140-zwart/"
+                            target="_blank">
+                            <strong>ezrider.nl</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 21,95</div>
+            </div>
+
+
+
+            <div class="property">
+                <a href="https://www.ezrider.nl/voortandwiel-afam-11-tanden-420-beta-motorhispania-rieju-yamaha-minarelli-am6/"
+                    target="_blank"><img src="images/voortandwiel-beta.jpg" alt="castrol olie 6 pak"></a>
+                <div class="label">voortandwiel</div>
+                <div class="property-details">
+                    <h2>voortandwiel Beta 11 tanden</h2>
+                    <p>Het voortandwiel moet om de 5000km verander worden.<a
+                            href="https://www.ezrider.nl/voortandwiel-afam-11-tanden-420-beta-motorhispania-rieju-yamaha-minarelli-am6/"
+                            target="_blank"> <strong>ezrider.nl</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 9,49</div>
+            </div>
+
+            <div class="property">
+                <a href="https://www.ezrider.nl/remblokken-polini-organisch-voor-race-voor-derbi-gilera-italjet-peugeot/"
+                    target="_blank"><img src="images/acthterremblokjes-beta.jpg" alt="castrol olie 6 pak"></a>
+                <div class="label">achterrem</div>
+                <div class="property-details">
+                    <h2>voortandwiel Beta 11 tanden</h2>
+                    <p>de achterrem moet ergens rond de 4000km vervangen worden maar dit hangt af van de rijstijl.<a
+                            href="https://www.ezrider.nl/remblokken-polini-organisch-voor-race-voor-derbi-gilera-italjet-peugeot/"
+                            target="_blank"> <strong>ezrider.nl</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 10,95</div>
+            </div>
+
+
+
+            <div class="property">
+                <a href="https://beta-motor-shop.de/nl/rr-50-onderdelen/motor/962/bougie-ngk-br9es" target="_blank"><img
+                        src="images/bougie-ngk-BR9ES.jpg" alt="castrol olie 6 pak"></a>
+                <div class="label">bougie</div>
+                <div class="property-details">
+                    <h2>Origineel bougie Beta</h2>
+                    <p>Dit is de Origineel bougie van Beta 50RR met part nummer BR9ES <a
+                            href="https://beta-motor-shop.de/nl/rr-50-onderdelen/motor/962/bougie-ngk-br9es"
+                            target="_blank"><strong>beta-motor-shop.de</strong></a>
+                    </p>
+                </div>
+                <div class="price">€ 4,99</div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div>
+            "© 2025 Beta list"
+        </div>
+        <div>
+            "Ontworpen door Kyan Stuyts"
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link rel="stylesheet" href="contact.css">
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+
+</head>
+
+<body>
+  <header>
+    <!--navigatie-->
+    <ul class="nav">
+      <li><a href="index.html">main parts</a></li>
+      <li><a href="kappen.html">kappen </a></li>
+      <li><a href="stuur.html">stuur</a></li>
+      <li><a href="onderhoud.html">onderhoud</a></li>
+      <li><a href="kleine-details.html">kleine details</a></li>
+      <li><a href="fun.html">fun</a></li>
+      <li><a class="active" href="contact.html">contact</a></li>
+    </ul>
+  </header>
+  <main>
+
+    <form action="https://formspree.io/f/mblkrvko" method="POST">
+      <input type="text" name="voornaam" placeholder="Voornaam" required>
+      <input type="text" name="achternaam" placeholder="Achternaam" required>
+      <input type="email" name="email" placeholder="E-mailadres" required>
+      <input type="tel" name="telefoon" placeholder="Telefoonnummer (not required)">
+
+      <textarea name="feedback" rows="6" placeholder="Wat is er mis met de website?" required></textarea>
+
+      <input type="hidden" name="_next" value="https://utsukushi-sa.github.io/Beta-website/bedankt.html">
+
+      <button type="submit">Verzenden</button>
+
+
+    </form>
+  </main>
+  <footer>
+    <div>
+      "© 2025 Beta list"
+    </div>
+    <div>
+      "Ontworpen door Kyan Stuyts"
+    </div>
+  </footer>
+</body>
+
+</html>

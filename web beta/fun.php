@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fun beta</title>
+  <link rel="stylesheet" href="stijl.css">
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+</head>
+
+<body>
+
+  <header>
+    <!--navigatie-->
+    <ul class="nav">
+      <li><a href="index.html">main parts</a></li>
+      <li><a href="kappen.html">kappen </a></li>
+      <li><a href="stuur.html">stuur</a></li>
+      <li><a href="onderhoud.html">onderhoud</a></li>
+      <li><a href="kleine-details.html">kleine details</a></li>
+      <li><a class="active" href="fun.html">fun</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Fun</h1>
+      <p>Hier zal je verschillende dingens vinden van opvoersets dan andere dingens</p>
+    </div>
+
+
+    <div class="container">
+      <div class="property">
+        <a href="https://www.vanseggeren.nl/origineel-tuning-kit-beta" target="_blank"><img
+            src="images/opvoerset-beta.jpg" alt="opvoerset voor beta rr50 motard"></a>
+        <div class="label">opvoerset</div>
+        <div class="property-details">
+          <h2>origineel opvoerset beta > 2021</h2>
+          <p>Dit is een orgineel opvoerset voor beta rr50 motard/enduro. hierien zit een sproerset, uitlaatset zonder
+            katalysator en voor/achtertandwiel <a href="https://www.vanseggeren.nl/origineel-tuning-kit-beta"
+              target="_blank"><strong>vanseggeren.nl</strong></a>
+          </p>
+        </div>
+        <div class="price">€ 149,95</div>
+      </div>
+
+
+
+
+    </div>
+
+  </main>
+  <footer>
+    <div>
+      "© 2025 Beta list"
+    </div>
+    <div>
+      "Ontworpen door Kyan Stuyts"
+    </div>
+  </footer>
+
+</body>
+
+</html>

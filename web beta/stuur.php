@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stuur Beta</title>
+  <link rel="stylesheet" href="stijl.css">
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+</head>
+
+<body>
+
+  <header>
+  <!--navigatie-->
+  <ul class="nav">
+    <li><a href="index.html">main parts</a></li>
+    <li><a href="kappen.html">kappen </a></li>
+    <li><a class="active" href="stuur.html">stuur</a></li>
+    <li><a href="onderhoud.html">onderhoud</a></li>
+    <li><a href="kleine-details.html">kleine details</a></li>
+    <li><a href="fun.html">fun</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+
+
+  </header>
+
+
+  <main>
+   <div class="container">
+        <h1>stuur en attachments</h1>
+        <p>OEM stuur en onderdelen</p>
+    </div>
+
+
+
+    <div class="container">
+        <div class="property">
+            <a href="https://beta-motor-shop.de/nl/rr-50-onderdelen/sturen-hendels-en-accessoires/1396/links-motard-50?c=151"
+                target="_blank">
+                <img src="images/OEM-Stuur-beta.jpg"
+                    alt="zwarte kappen set voor beta"></a>
+            <div class="label">OEM stuur</div>
+            <div class="property-details">
+                <h2>OEM Beta stuur</h2>
+                <p>Dit is de standaars stuur voor Beta modellen boven 2010 <a
+                        href="https://beta-motor-shop.de/nl/rr-50-onderdelen/sturen-hendels-en-accessoires/1396/links-motard-50?c=151"
+                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 39,99</div>
+        </div>
+
+
+        <div class="property">
+            <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/hendel-stuur/273/koppelingshebel-oem?c=151"
+                target="_blank">
+                <img src="images/OEM-koppelinhendel-beta.jpg"
+                    alt="zwarte kappen set voor beta"></a>
+            <div class="label">OEM koppelinghendel</div>
+            <div class="property-details">
+                <h2>OEM Beta koppelinghendel</h2>
+                <p>Dit is de standaars Beta koppelinghendel voor RR50 vanaf 2006 <a
+                        href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/hendel-stuur/273/koppelingshebel-oem?c=151"
+                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 27,99</div>
+        </div>
+
+
+
+        <div class="property">
+            <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/hendel-stuur/190/handremshebel-oem?c=151"
+                target="_blank">
+                <img src="images/OEM-handrem-beta.jpg"
+                    alt="zwarte kappen set voor beta"></a>
+            <div class="label">OEM handremhendel</div>
+            <div class="property-details">
+                <h2>OEM Beta handremhendel</h2>
+                <p>Dit is de standaars Beta handremhendel voor RR50 vanaf 2006 <a
+                        href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/hendel-stuur/190/handremshebel-oem?c=151"
+                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 36,99</div>
+        </div>
+
+
+        <!--einde container stuur en attachments-->
+    </div>
+
+
+
+
+
+  </main>
+
+
+
+  <!--footer creds-->
+  <footer>
+    <div>
+      "© 2025 Beta list"
+    </div>
+    <div>
+      "Ontworpen door Kyan Stuyts"
+    </div>
+  </footer>
+
+</body>
+
+</html>

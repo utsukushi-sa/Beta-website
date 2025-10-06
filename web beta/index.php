@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onderdelen/mods-beta</title>
+        <link rel="stylesheet" href="stijl.css">
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+</head>
+
+<body>
+        <header>
+                <!--navigatie-->
+                <ul class="nav">
+                        <li><a class="active" href="index.html">main parts</a></li>
+                        <li><a href="kappen.html">kappen </a></li>
+                        <li><a href="stuur.html">stuur</a></li>
+                        <li><a href="onderhoud.html">onderhoud</a></li>
+                        <li><a href="kleine-details.html">kleine details</a></li>
+                        <li><a href="fun.html">fun</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                </ul>
+        </header>
+
+
+
+        <main>
+
+                <div class="container">
+                        <h1>main parts</h1>
+                        <p>hier zal je belangerijke delen zoals voorvorken voor je Beta kunnen vinden</p>
+                </div>
+
+
+                <div class="container">
+                        <div class="property">
+                                <a href="https://www.scooterdiscounter.nl/voorvork-beta-rr-derbi-x-race-rieju-mrt.html?utm_source=googleshopping&utm_medium=cpc&utm_campaign=googleshopping&gad_source=1&gad_campaignid=9465223368&gbraid=0AAAAADf26pcB966dnFFi50Kr7xv4yCm5v&gclid=Cj0KCQjw-NfDBhDyARIsAD-ILeA_fA4oRqVkGrb-ZcJUzhHmxYRgsML_bjkryUP7BBinP0ajKPYLVh4aAmvtEALw_wcB"
+                                        target="_blank"><img src="images/voorvork-beta-rr-rieju-mrt-derbi-x-race.jpg"
+                                                alt="zwarte versnellingspook Beta"></a>
+                                <div class="label">voorvork</div>
+                                <div class="property-details">
+                                        <h2>Voorvork Beta RR50 motard moddelen</h2>
+                                        <p>dit is een volledig voorvork set voor Beta RR50 moddelen <a
+                                                        href="https://www.scooterdiscounter.nl/voorvork-beta-rr-derbi-x-race-rieju-mrt.html?utm_source=googleshopping&utm_medium=cpc&utm_campaign=googleshopping&gad_source=1&gad_campaignid=9465223368&gbraid=0AAAAADf26pcB966dnFFi50Kr7xv4yCm5v&gclid=Cj0KCQjw-NfDBhDyARIsAD-ILeA_fA4oRqVkGrb-ZcJUzhHmxYRgsML_bjkryUP7BBinP0ajKPYLVh4aAmvtEALw_wcB"
+                                                        target="_blank"><strong>scooterdiscounter.nl</strong></a>
+                                        </p>
+                                </div>
+                                <div class="price">€ 259,90</div>
+                        </div>
+
+
+
+                        <div class="property">
+                                <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/diverse-accessoires/1487/achterframe-vanaf-21?c=130"
+                                        target="_blank"><img src="images/achterframe-beta-vanaf-2021_600x600.jpg"
+                                                alt="zwarte versnellingspook Beta"></a>
+                                <div class="label">achterframe</div>
+                                <div class="property-details">
+                                        <h2>achterfram Beta RR50 vanaf 2021</h2>
+                                        <p>dit is het acterframe voor Beta RR50 modellen vanaf 2021 <a
+                                                        href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/diverse-accessoires/1487/achterframe-vanaf-21?c=130"
+                                                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                                        </p>
+                                </div>
+                                <div class="price">€ 107,99</div>
+                        </div>
+
+                        <div class="property">
+                                <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/diverse-accessoires/2914/achterframe?c=130"
+                                        target="_blank"><img src="images/achterframe-beta-2012-tot-2020_600x600.jpg"
+                                                alt="zwarte versnellingspook Beta"></a>
+                                <div class="label">acterframe</div>
+                                <div class="property-details">
+                                        <h2>achterfram Beta RR50 2012 tot 2020</h2>
+                                        <p>dit is het acterframe voor Beta RR50 moddelen van 2012 tot 2020 <a
+                                                        href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/diverse-accessoires/2914/achterframe?c=130"
+                                                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                                        </p>
+                                </div>
+                                <div class="price">€ 107,99</div>
+                        </div>
+
+
+
+                        <div class="property">
+                                <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/slijtage-onderdelen/banden-accessoires/3073/motard-velg-vanaf-21?number=&c=149"
+                                        target="_blank"><img
+                                                src="images/velg-set-van-2012-tot-2020-RR50-motard-600x600.jpg"
+                                                alt="velg set 2012 tot 2020 Beta RR50 Motard"></a>
+                                <div class="label">RR50 motard velggen</div>
+                                <div class="property-details">
+                                        <h2>velg set Beta RR50 vanaf 2021</h2>
+                                        <p>dit is het velg set (voor en achterwiel velg) voor Beta RR50 moddelen van
+                                                2012 tot 2020 <a
+                                                        href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/slijtage-onderdelen/banden-accessoires/3073/motard-velg-vanaf-21?number=&c=149"
+                                                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                                        </p>
+                                </div>
+                                <div class="price">€ 249,99</div>
+                        </div>
+
+
+
+
+
+                        <div class="property">
+                                <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/slijtage-onderdelen/banden-accessoires/3073/motard-velg-vanaf-21?number=&c=149"
+                                        target="_blank"><img src="images/velg-set-RR50-motard-vanaf-2021-600x600.jpg"
+                                                alt="velg set Beta RR50 Motard vanaf 2021"></a>
+                                <div class="label">RR50 motard velggen</div>
+                                <div class="property-details">
+                                        <h2>velg set Beta RR50 vanaf 2021</h2>
+                                        <p>dit is het velg set (voor en achterwiel velg) voor Beta RR50 moddelen vanaf
+                                                2021 <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/slijtage-onderdelen/banden-accessoires/3073/motard-velg-vanaf-21?number=&c=149"
+                                                        target="_blank"><strong>beta-motor-shop.de</strong></a>
+                                        </p>
+                                </div>
+                                <div class="price">€ 249,99</div>
+                        </div>
+
+
+
+
+
+
+                </div>
+
+        </main>
+
+        <footer>
+                <div>
+                        "© 2025 Beta list"
+                </div>
+                <div>
+                        "Ontworpen door Kyan Stuyts"
+                </div>
+        </footer>
+
+
+</body>
+
+</html>
