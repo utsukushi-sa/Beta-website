@@ -21,7 +21,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color: #e67e22;
+    background-color: #e82a1d;
 }
 
 .nav li a:hover:not(.active) {
@@ -29,7 +29,7 @@
 }
 
 .nav .active {
-    background-color: #a04000;
+    background-color: #b13706;
 }
 
 .property-details a {
