@@ -7,9 +7,11 @@
   <title>fun beta</title>
   <link rel="stylesheet" href="stijl.css">
   <link rel="shortcut icon" href="images/c66e937d-59c5-492d-bc5b-8027501127dc.png" type="image/x-icon">
-  <link rel="stylesheet" href="winkelmand.css">
-  <script src="winkelmand.js" defer></script>
 
+  <!-- Winkelmand en prijzensysteem -->
+  <link rel="stylesheet" href="winkelmand.css">
+  <script src="prijzen.js" defer></script>
+  <script src="winkelmand.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +20,7 @@
     <!--navigatie-->
     <ul class="nav">
       <li><a href="index.html">main parts</a></li>
-      <li><a href="kappen.html">kappen </a></li>
+      <li><a href="kappen.html">kappen</a></li>
       <li><a href="stuur.html">stuur</a></li>
       <li><a href="onderhoud.html">onderhoud</a></li>
       <li><a href="kleine-details.html">kleine details</a></li>
@@ -30,54 +32,45 @@
   <main>
     <div class="container">
       <h1>Fun</h1>
-      <p>Hier zal je verschillende dingens vinden van opvoersets dan andere dingens</p>
+      <p>Hier zal je verschillende dingen vinden van opvoersets tot andere onderdelen.</p>
     </div>
-
 
     <div class="container">
       <div class="property">
-        <a href="https://www.vanseggeren.nl/origineel-tuning-kit-beta" target="_blank"><img
-            src="images/opvoerset-beta.jpg" alt="opvoerset voor beta rr50 motard"></a>
-        <div class="label">opvoerset</div>
+        <a href="https://www.vanseggeren.nl/origineel-tuning-kit-beta" target="_blank">
+          <img src="images/opvoerset-beta.jpg" alt="opvoerset voor beta rr50 motard">
+        </a>
+        <div class="label">Opvoerset</div>
         <div class="property-details">
-          <h2>origineel opvoerset beta > 2021</h2>
-          <p>Dit is een orgineel opvoerset voor beta rr50 motard/enduro. hierien zit een sproerset, uitlaatset zonder
-            katalysator en voor/achtertandwiel <a href="https://www.vanseggeren.nl/origineel-tuning-kit-beta"
-              target="_blank"><strong>vanseggeren.nl</strong></a>
+          <h2>Origineel opvoerset Beta &gt; 2021</h2>
+          <p>
+            Dit is een origineel opvoerset voor Beta RR50 Motard/Enduro.  
+            Hierin zit een sproeierset, uitlaatset zonder katalysator en voor/achtertandwiel.  
+            Verkrijgbaar bij 
+            <a href="https://www.vanseggeren.nl/origineel-tuning-kit-beta" target="_blank">
+              <strong>vanseggeren.nl</strong>
+            </a>.
           </p>
         </div>
-        <div class="price">€ 149,95</div>
+        <!-- prijs gekoppeld via prijzen.json -->
+        <div class="price" id="opvoerset">€ 0,00</div>
       </div>
-
-
-
-
     </div>
-
   </main>
 
-  
-   <!-- credits -->
+  <!-- Winkelmand rechts (automatisch gesynchroniseerd via localStorage) -->
+  <div id="cart">
+    <h2>Winkelmandje</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Totaal: € 0,00</p>
+    <button id="clear-cart" style="margin-top:0.5rem;">Leeg mandje</button>
+  </div>
+
+  <!-- credits -->
   <footer>
-    <div>
-      "© 2025 Beta list"
-    </div>
-    <div>
-      "Ontworpen door Kyan Stuyts"
-    </div>
+    <div>© 2025 Beta list</div>
+    <div>Ontworpen door Kyan Stuyts</div>
   </footer>
 
-<!-- Winkelmand rechts -->
-<div id="cart">
-  <h2>Winkelmandje</h2>
-  <ul id="cart-items"></ul>
-  <p id="cart-total">Totaal: € 0,00</p>
-</div>
-
-
-
-  
-
 </body>
-
 </html>
