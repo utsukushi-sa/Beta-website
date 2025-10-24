@@ -45,50 +45,38 @@ button:hover {
 
 /* Navigatie */
 .nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #e67e22;
-  z-index: 1;
-  position: sticky;
-  top: 0;
-  left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e82a1d;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .nav li {
-  float: left;
+    float: left;
 }
 
 .nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  background-color: #e67e22;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #e82a1d;
 }
 
 .nav li a:hover:not(.active) {
-  background-color: #d35400;
+    background-color: #d35400;
 }
 
 .nav .active {
-  background-color: #a04000;
+    background-color: #b13706;
 }
 
-
-footer>div {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: rgb(197, 7, 7);
-  color: white;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-
-}
 
 @media (max-width: 900px) {
   body {
