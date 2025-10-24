@@ -241,3 +241,50 @@ img {
         padding: 8px;
     }
 }
+/* Winkelmand stijl */
+#cart {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 260px;
+  background: white;
+  border-left: 2px solid #88003d;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 100;
+  display: none;
+}
+
+#cart h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #88003d;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.plus-btn {
+  background-color: #88003d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.plus-btn:hover {
+  background-color: #660030;
+}

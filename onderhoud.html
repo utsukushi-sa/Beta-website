@@ -168,7 +168,12 @@
         </div>
 
 
-
+            <!-- Winkelmand rechts -->
+<div id="cart">
+  <h2>Geselecteerde items</h2>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Totaal: € 0,00</p>
+</div>
     </main>
 
     <!-- credits -->
@@ -181,6 +186,41 @@
     </div>
   </footer>
 
+<script>
+document.querySelectorAll('.property').forEach(property => {
+  const plusBtn = document.createElement('button');
+  plusBtn.textContent = '+';
+  plusBtn.classList.add('plus-btn');
+  property.appendChild(plusBtn);
+
+  plusBtn.addEventListener('click', () => {
+    const name = property.querySelector('h2').textContent.trim();
+    const priceText = property.querySelector('.price').textContent.trim();
+    const price = parseFloat(priceText.replace('€', '').replace(',', '.'));
+
+    const cart = document.getElementById('cart');
+    const cartItems = document.getElementById('cart-items');
+    const totalElem = document.getElementById('cart-total');
+
+    const li = document.createElement('li');
+    li.textContent = `${name} - ${priceText}`;
+    cartItems.appendChild(li);
+
+    // Toon winkelmand als hij nog niet zichtbaar is
+    cart.style.display = 'block';
+
+    // Bereken totaal
+    let total = 0;
+    cartItems.querySelectorAll('li').forEach(item => {
+      const text = item.textContent;
+      const value = parseFloat(text.split('€')[1]);
+      total += value;
+    });
+
+    totalElem.textContent = `Totaal: € ${total.toFixed(2).replace('.', ',')}`;
+  });
+});
+</script>
 
 </body>
 
