@@ -51,6 +51,65 @@
       "Ontworpen door Kyan Stuyts"
     </div>
   </footer>
+
+  <!-- Winkelmand rechts -->
+<div id="cart">
+  <h2>Winkelmandje</h2>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Totaal: € 0,00</p>
+</div>
+
+
+  <script>
+// Voeg plusknoppen toe aan elk product
+const properties = document.querySelectorAll('.property');
+properties.forEach(property => {
+  const plusBtn = document.createElement('button');
+  plusBtn.textContent = '+';
+  plusBtn.classList.add('plus-btn');
+  property.appendChild(plusBtn);
+});
+
+// Winkelmand functionaliteit
+const cart = document.getElementById('cart');
+const cartItems = document.getElementById('cart-items');
+const totalElem = document.getElementById('cart-total');
+let total = 0;
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('plus-btn')) {
+    const property = e.target.closest('.property');
+    const name = property.querySelector('h2').textContent.trim();
+    const priceText = property.querySelector('.price').textContent.trim();
+    const price = parseFloat(priceText.replace('€', '').replace(',', '.'));
+
+    const li = document.createElement('li');
+    li.innerHTML = `${name} - ${priceText} <button class="remove-btn">x</button>`;
+    cartItems.appendChild(li);
+
+    total += price;
+    totalElem.textContent = `Totaal: € ${total.toFixed(2).replace('.', ',')}`;
+    cart.style.display = 'block';
+  }
+
+  // Verwijder item uit mandje
+  if (e.target.classList.contains('remove-btn')) {
+    const li = e.target.closest('li');
+    const priceText = li.textContent.split('€')[1];
+    const price = parseFloat(priceText);
+    li.remove();
+
+    total -= price;
+    totalElem.textContent = `Totaal: € ${total.toFixed(2).replace('.', ',')}`;
+
+    if (cartItems.children.length === 0) {
+      cart.style.display = 'none';
+      total = 0;
+      totalElem.textContent = 'Totaal: € 0,00';
+    }
+  }
+});
+</script>
 </body>
 
 </html>
