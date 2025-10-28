@@ -2,9 +2,48 @@
   "wit_kappen": 169.0,
   "grijs_kappen": 169.0,
   "zwart_kappen": 169.0,
+<<<<<<< HEAD
   "stickerset": 89.99,
   "oem_stuur": 39.99,
   "koppelinghendel": 27.99,
   "handremhendel": 36.99,
   "opvoerset": 149.99
+=======
+
+  
+  "stickerset_grijs": 89.99,
+
+
+  "oem_stuur": 39.99,
+  "koppelinghendel": 27.99,
+  "handremhendel": 36.99,
+
+
+  "opvoerset": 149.99,
+
+
+  "stuur_oem_beta": 39.99,
+  "koppelinghendel_oem_beta": 27.99,
+  "handremhendel_oem_beta": 36.99,
+
+
+  "voorvork_beta": 259.90,
+  "achterframe_vanaf2021": 107.99,
+  "achterframe_tot2020": 202.99,
+  "velgen_tot_2020": 249.99,
+  "velgen_vanaf2021": 249.99,
+
+
+  "olie_bol": 63.45,
+  "olie_ezrider": 56.70,
+  "olie_kparts": 11.99,
+
+  "ketting_140_links": 27.95,
+  "voortandwiel_11_tanden": 11.95,
+  "polini_achterrem": 9.95,
+  "bougie_org_beta": 4.99,
+
+  "zwart_shifter_beta": 13.90 
+
+>>>>>>> 558ccb5 (.)
 }

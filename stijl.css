@@ -55,7 +55,10 @@ footer>div {
     padding-top: 10px;
     padding-bottom: 10px;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 558ccb5 (.)
 }
 
 aside {
@@ -141,6 +144,22 @@ img {
 }
 
 
+<<<<<<< HEAD
+=======
+/* stijl voor de intro gedeeltes 
+   (de delen boven onderdelen die extra info geven over wat je gaat) */
+.intro {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+
+>>>>>>> 558ccb5 (.)
 /*stijl afbeelding in div class property*/
 .property img {
     width: 250px;

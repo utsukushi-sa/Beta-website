@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,4 +127,134 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kapppen beta-motoren</title>
+    <link rel="stylesheet" href="stijl.css">
+        <!--<link rel="shortcut icon" href="images/betamotor-logo_brandlogos.net_khet7.png" type="image/x-icon">-->
+
+</head>
+
+
+
+<header>
+    <ul class="nav">
+        <li><a href="index.html">main parts</a></li>
+        <li><a class="active" href="kappen.html">kappen </a></li>
+        <li><a href="stuur.html">stuur</a></li>
+        <li><a href="onderhoud.html">onderhoud</a></li>
+        <li><a href="kleine-details.html">kleine details</a></li>
+        <li><a href="fun.html">fun</a></li>
+        <li><a href="contact.html">contact</a></li>
+    </ul>
+</header>
+<main>
+    <div class="container">
+        <h1>Kappen</h1>
+        <p>standaard kappen zijn mooie maar andere kappen met andere stickers zijn dat ook</p>
+    </div>
+
+
+
+
+    <!--witte kappen-->
+    <div class="container">
+        <div class="property">
+            <a href="https://www.beta-motoren.nl/pages/bakery/plastic-kit-wit-2113.php" target="_blank"><img
+                    src="images/kappen-beta-wit.jpg" alt="witte kappenset voor beta"></a>
+            <div class="label">kappen</div>
+            <div class="property-details">
+                <h2>Witten kappen </h2>
+                <p>Deze Kappen zijn goed als je een stickerset zou willen plaatsen maar ook om te wrappen. Deze kappen
+                    komen van <a href="https://www.beta-motoren.nl/pages/bakery/plastic-kit-wit-2113.php"
+                        target="_blank"><strong>beta-motoren.nl</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 169,00</div>
+        </div>
+
+
+        <!--grijze kappen-->
+        <div class="property">
+            <a href="https://www.beta-motoren.nl/pages/bakery/plastic-kit-quantum-grijs-2115.php" target="_blank"><img
+                    src="images/Beta_plastic_kit_quantum_grijs.jpg" alt="quantum grijze kappenset voor beta"></a>
+            <div class="label">kappen</div>
+            <div class="property-details">
+                <h2>quantum grijze kappen </h2>
+                <p>Deze kappen lijken heel hard op de standaard kappen van de beta rr50 special edition . Deze kappen
+                    komen van <a href="https://www.beta-motoren.nl/pages/bakery/plastic-kit-quantum-grijs-2115.php"
+                        target="_blank"><strong>beta-motoren.nl</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 169,00</div>
+        </div>
+
+
+        <!--zwarte kappen-->
+        <div class="property">
+            <a href="https://www.beta-motoren.nl/pages/bakery/plastic-kit-zwart-2112.php" target="_blank">
+                <img src="images/Beta_plastic_kit_zwart.jpg" alt="zwarte kappen set voor beta"></a>
+            <div class="label">kappen</div>
+            <div class="property-details">
+                <h2>quantum grijze kappen </h2>
+                <p>Deze kappen zijn fully black. Deze kappen komen van <a
+                        href="https://www.beta-motoren.nl/pages/bakery/plastic-kit-zwart-2112.php"
+                        target="_blank"><strong>beta-motoren.nl</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 169,00</div>
+        </div>
+
+        <!--einde van de container-->
+    </div>
+
+
+    <div class="container">
+        <h1>Stickerset</h1>
+        <p>hieronder zullen custom stickersetten staan maar ook OEM stickersetten</p>
+    </div>
+
+
+    <div class="container">
+        <div class="property">
+            <a href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/decorsets/3515/rr-50/125-t-stickerset-x-my24"
+                target="_blank">
+                <img src="images/standaars-stickerset-special-edition.jpg" alt="zwarte kappen set voor beta"></a>
+            <div class="label">OEM Stickerset</div>
+            <div class="property-details">
+                <h2>grijze Stickerset</h2>
+                <p>Dit is de standaars stickerset voor RR 50 /125 special edition. <a
+                        href="https://beta-motor-shop.de/nl/rrre-125-onderdelen/decorsets/3515/rr-50/125-t-stickerset-x-my24"
+                        target="_blank"><strong>beta-motoren.nl</strong></a>
+                </p>
+            </div>
+            <div class="price">€ 89,99</div>
+        </div>
+
+
+
+
+    </div>
+
+</main>
+<footer>
+    <div>
+        "© 2025 Beta list"
+    </div>
+    <div>
+        "Ontworpen door Kyan Stuyts"
+    </div>
+</footer>
+
+
+
+
+</body>
+
+>>>>>>> 558ccb5 (.)
 </html>
