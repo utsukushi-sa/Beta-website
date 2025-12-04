@@ -30,10 +30,12 @@
   "olie_bol": 63.45,
   "olie_ezrider": 56.70,
   "olie_kparts": 11.99,
+  "olie_motorolien": 49.74,
 
   "ketting_140_links": 27.95,
   "voortandwiel_11_tanden": 11.95,
-  "polini_achterrem": 9.95,
+  "polini_voorrem": 9.95,
+  "polini_achterrem":17.95,
   "bougie_org_beta": 4.99,
 
   "zwart_shifter_beta": 13.90 
