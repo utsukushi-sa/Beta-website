@@ -1,220 +1,173 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login / Registratie</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="shortcut icon" href="images/c66e937d-59c5-492d-bc5b-8027501127dc.png" type="image/x-icon">   
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="login.css">
+<title>Login / Registratie</title>
+
 </head>
 <body>
-     <header>
-                <!--navigatie-->
-                <ul class="nav">
-                        <li><a href="index.html">main parts</a></li>
-                        <li><a href="kappen.html">kappen </a></li>
-                        <li><a href="stuur.html">stuur</a></li>
-                        <li><a href="onderhoud.html">onderhoud</a></li>
-                        <li><a href="kleine-details.html">kleine details</a></li>
-                        <li><a href="fun.html">fun</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                        <li><a class="active" href="login.html">Login</a></li>
-                        <li><a href="protected.html">protected</a></li>
-                </ul>
-        </header>
+
+ <header>
+  <!--navigatie-->
+  <ul class="nav">
+    <li><a href="index.html">main parts</a></li>
+    <li><a href="kappen.html">kappen </a></li>
+    <li><a href="stuur.html">stuur</a></li>
+    <li><a href="onderhoud.html">onderhoud</a></li>
+    <li><a href="kleine-details.html">kleine details</a></li>
+    <li><a href="fun.html">fun</a></li>
+    <li><a href="contact.html">contact</a></li>
+    <li><a class="active" href="login.html">Login</a></li>
+    <li><a href="protected.html">protected</a></li>
+  </ul>
 
 
-  <h1>Account Login</h1>
+  </header>
 
-  <!-- REGISTRATIE FORM -->
-  <form id="signup-form">
-    <h2>Account Aanmaken</h2>
-    <input id="signup-name" type="text" placeholder="Gebruikersnaam" required>
-    <input id="signup-email" type="email" placeholder="Email" required>
-    <input id="signup-pass" type="password" placeholder="Wachtwoord (min. 6 tekens)" required minlength="6">
-    <button type="submit">Registreren</button>
-  </form>
+<h1>Login / Registratie</h1>
 
-  <!-- LOGIN FORM -->
-  <form id="login-form">
-    <h2>Inloggen</h2>
-    <input id="login-email" type="email" placeholder="Email" required>
-    <input id="login-pass" type="password" placeholder="Wachtwoord" required>
-    <button type="submit">Inloggen</button>
+<form id="signup-form">
+  <h2>Account Aanmaken</h2>
+  <input id="signup-name" type="text" placeholder="Gebruikersnaam" required>
+  <input id="signup-email" type="email" placeholder="Email" required>
+  <input id="signup-pass" type="password" placeholder="Wachtwoord (min.6 tekens)" required minlength="6">
+  <button type="submit">Registreren</button>
+</form>
 
-    <br><br>
-    <button type="button" id="reset-pass-btn">Wachtwoord vergeten?</button>
-  </form>
+<form id="login-form">
+  <h2>Inloggen</h2>
+  <input id="login-email" type="email" placeholder="Email" required>
+  <input id="login-pass" type="password" placeholder="Wachtwoord" required>
+  <button type="submit">Inloggen</button>
+  <br><br>
+  <button type="button" id="reset-pass-btn">Wachtwoord vergeten?</button>
+  <button type="button" id="check-verification">Controleer verificatie</button>
+</form>
 
-  <!-- USER INFO ZICHTBAAR NA LOGIN -->
-  <div id="user-info" style="display:none;">
-    <p id="welcome"></p>
-    <p id="verify-warning" style="color: red; font-weight: bold;"></p>
-    <button id="logout-btn">Uitloggen</button>
-  </div>
+<div id="user-info" style="display:none;">
+  <p id="welcome"></p>
+  <p id="verify-warning" style="color:red; font-weight:bold;"></p>
+  <button id="logout-btn">Uitloggen</button>
+  <button id="go-protected" onclick="window.location.href='protected.html'">Ga naar protected pagina</button>
+</div>
 
-  <!-- FIREBASE -->
-  <script type="module">
-    import { 
-      initializeApp 
-    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
-    import { 
-      getAuth, 
-      createUserWithEmailAndPassword,
-      updateProfile,
-      signInWithEmailAndPassword,
-      sendEmailVerification,
-      sendPasswordResetEmail,
-      signOut,
-      onAuthStateChanged
-    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+/* 🔥 Vul hier jouw Firebase config in */
+const firebaseConfig = {
+   apiKey: "AIzaSyAh2nx8hk3VTqRIpIWvAOUYfEb_mIEb0-s",
+   authDomain: "beta-site-21f67.firebaseapp.com",
+   projectId: "beta-site-21f67",
+   storageBucket: "beta-site-21f67.firebasestorage.app",
+   messagingSenderId: "316488809458",
+   appId: "1:316488809458:web:b3c4540c7542e50871c96b"
+};
 
-    import {
-      getFirestore,
-      doc,
-      setDoc,
-      serverTimestamp
-    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
+const signupForm = document.getElementById("signup-form");
+const loginForm = document.getElementById("login-form");
+const resetPassBtn = document.getElementById("reset-pass-btn");
+const checkVerificationBtn = document.getElementById("check-verification");
+const userInfo = document.getElementById("user-info");
+const welcome = document.getElementById("welcome");
+const verifyWarning = document.getElementById("verify-warning");
+const logoutBtn = document.getElementById("logout-btn");
 
-    /* ---------------------------------------------------------
-       🔥 VUL HIER JOUW FIREBASE CONFIG IN
-    ------------------------------------------------------------*/
-    const firebaseConfig = {
-      apiKey: "AIzaSyAh2nx8hk3VTqRIpIWvAOUYfEb_mIEb0-s",
-      authDomain: "beta-site-21f67.firebaseapp.com",
-      projectId: "beta-site-21f67",
-      storageBucket: "beta-site-21f67.firebasestorage.app",
-      messagingSenderId: "316488809458",
-      appId: "1:316488809458:web:b3c4540c7542e50871c96b"
+/* -----------------------------
+   ⭐ REGISTRATIE
+----------------------------- */
+signupForm.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const name = document.getElementById("signup-name").value;
+  const email = document.getElementById("signup-email").value;
+  const pass = document.getElementById("signup-pass").value;
 
-    };
-    /* --------------------------------------------------------- */
-
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-
-    // ELEMENTS
-    const signupForm = document.getElementById("signup-form");
-    const loginForm = document.getElementById("login-form");
-    const resetPassBtn = document.getElementById("reset-pass-btn");
-    const userInfo = document.getElementById("user-info");
-    const welcome = document.getElementById("welcome");
-    const verifyWarning = document.getElementById("verify-warning");
-    const logoutBtn = document.getElementById("logout-btn");
-
-
-    /* -----------------------------
-       ⭐ REGISTRATIE
-    --------------------------------*/
-    signupForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById("signup-name").value;
-      const email = document.getElementById("signup-email").value;
-      const pass = document.getElementById("signup-pass").value;
-
-      try {
-        const cred = await createUserWithEmailAndPassword(auth, email, pass);
-
-        // profielnaam instellen
-        await updateProfile(cred.user, { displayName: name });
-
-        // user opslaan in Firestore
-        await setDoc(doc(db, "users", cred.user.uid), {
-          name: name,
-          email: email,
-          createdAt: serverTimestamp()
-        });
-
-        // verificatie email versturen
-        await sendEmailVerification(cred.user);
-        alert("Account aangemaakt! Check je inbox voor verificatie.");
-
-        signupForm.reset();
-
-      } catch (err) {
-        alert("Fout: " + err.message);
-      }
+  try {
+    const cred = await createUserWithEmailAndPassword(auth,email,pass);
+    await updateProfile(cred.user,{displayName:name});
+    await setDoc(doc(db,"users",cred.user.uid),{
+      name:name,
+      email:email,
+      createdAt: serverTimestamp()
     });
+    await sendEmailVerification(cred.user);
+    alert("Account aangemaakt! Check je inbox voor verificatie.");
+    signupForm.reset();
+  } catch(err){ alert("Fout: "+err.message);}
+});
 
+/* -----------------------------
+   ⭐ INLOGGEN
+----------------------------- */
+loginForm.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const email = document.getElementById("login-email").value;
+  const pass = document.getElementById("login-pass").value;
+  try {
+    await signInWithEmailAndPassword(auth,email,pass);
+    loginForm.reset();
+  } catch(err){ alert("Inlog fout: "+err.message);}
+});
 
+/* -----------------------------
+   ⭐ WACHTWOORD RESET
+----------------------------- */
+resetPassBtn.addEventListener("click", async ()=>{
+  const email = prompt("Voer je email in:");
+  if(!email) return;
+  try{
+    await sendPasswordResetEmail(auth,email);
+    alert("Reset e-mail verstuurd! Check je inbox.");
+  } catch(err){ alert("Fout: "+err.message);}
+});
 
-    /* -----------------------------
-       ⭐ INLOGGEN
-    --------------------------------*/
-    loginForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
+/* -----------------------------
+   ⭐ CHECK EMAIL VERIFICATIE
+----------------------------- */
+checkVerificationBtn.addEventListener("click", async ()=>{
+  const user = auth.currentUser;
+  if(user){
+    await user.reload(); // refresh verificatie status
+    if(user.emailVerified){
+      alert("Je e-mail is geverifieerd!");
+      location.reload();
+    } else{
+      alert("Nog steeds niet geverifieerd, check je inbox.");
+    }
+  }
+});
 
-      const email = document.getElementById("login-email").value;
-      const pass = document.getElementById("login-pass").value;
+/* -----------------------------
+   ⭐ USER STATUS
+----------------------------- */
+onAuthStateChanged(auth, async (user)=>{
+  if(user){
+    await user.reload();
+    userInfo.style.display = "block";
+    welcome.textContent = "Welkom, "+(user.displayName||user.email);
+    verifyWarning.textContent = user.emailVerified?"":"⚠ Gelieve je e-mail te verifiëren.";
+  } else{
+    userInfo.style.display = "none";
+    welcome.textContent = "";
+    verifyWarning.textContent = "";
+  }
+});
 
-      try {
-        await signInWithEmailAndPassword(auth, email, pass);
-        loginForm.reset();
-
-      } catch (err) {
-        alert("Inlog fout: " + err.message);
-      }
-    });
-
-
-
-    /* -----------------------------
-       ⭐ WACHTWOORD RESET
-    --------------------------------*/
-    resetPassBtn.addEventListener("click", async () => {
-      const email = prompt("Voer je email in:");
-
-      if (!email) return;
-
-      try {
-        await sendPasswordResetEmail(auth, email);
-        alert("Reset e-mail verstuurd! Check je inbox.");
-
-      } catch (err) {
-        alert("Fout: " + err.message);
-      }
-    });
-
-
-
-    /* -----------------------------
-       ⭐ USER STATUS
-    --------------------------------*/
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        userInfo.style.display = "block";
-
-        welcome.textContent = "Welkom, " + (user.displayName || user.email);
-
-        if (!user.emailVerified) {
-          verifyWarning.textContent = "⚠ Gelieve je e-mail te verifiëren.";
-        } else {
-          verifyWarning.textContent = "";
-        }
-      } 
-      else {
-        userInfo.style.display = "none";
-        welcome.textContent = "";
-        verifyWarning.textContent = "";
-      }
-    });
-
-
-
-    /* -----------------------------
-       ⭐ UITLOGGEN
-    --------------------------------*/
-    logoutBtn.addEventListener("click", async () => {
-      await signOut(auth);
-    });
-
-  </script>
+/* -----------------------------
+   ⭐ UITLOGGEN
+----------------------------- */
+logoutBtn.addEventListener("click", async ()=>{
+  await signOut(auth);
+});
+</script>
 
 </body>
 </html>
