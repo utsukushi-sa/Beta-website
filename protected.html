@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protected Pagina</title>
+
+  <style>
+    body { font-family: Arial; max-width: 700px; margin: 2rem auto; }
+    .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e82a1d;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #e82a1d;
+}
+
+.nav li a:hover:not(.active) {
+    background-color: #d35400;
+}
+
+.nav .active {
+    background-color: #b13706;
+}
+  </style>
+</head>
+<body>
+
+    <header>
+  <!--navigatie-->
+  <ul class="nav">
+    <li><a href="index.html">main parts</a></li>
+    <li><a href="kappen.html">kappen </a></li>
+    <li><a href="stuur.html">stuur</a></li>
+    <li><a href="onderhoud.html">onderhoud</a></li>
+    <li><a href="kleine-details.html">kleine details</a></li>
+    <li><a href="fun.html">fun</a></li>
+    <li><a href="contact.html">contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a class="active" href="protected.html">protected</a></li>
+  </ul>
+
+
+  </header>
+
+  <h1>Protected Content</h1>
+  <p id="status">Gegevens laden...</p>
+  <button id="logout-btn" style="display:none;">Uitloggen</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { 
+      getAuth, 
+      onAuthStateChanged, 
+      signOut 
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    /* ---------------------------------------------------------
+       firebase config
+    ------------------------------------------------------------*/
+    const firebaseConfig = {
+      apiKey: "AIzaSyAh2nx8hk3VTqRIpIWvAOUYfEb_mIEb0-s",
+      authDomain: "beta-site-21f67.firebaseapp.com",
+      projectId: "beta-site-21f67",
+      storageBucket: "beta-site-21f67.firebasestorage.app",
+      messagingSenderId: "316488809458",
+      appId: "1:316488809458:web:b3c4540c7542e50871c96b"
+    };
+    /* --------------------------------------------------------- */
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const statusText = document.getElementById("status");
+    const logoutBtn = document.getElementById("logout-btn");
+
+    // Bescherming
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "login.html"; // ⛔ niet ingelogd → terugsturen
+      } else if (!user.emailVerified) {
+        statusText.innerHTML = "⚠ Je moet eerst je e-mail verifiëren.";
+      } else {
+        statusText.innerHTML = "Welkom " + (user.displayName || user.email) + "!<br>🎉 Je hebt toegang tot de protected pagina.";
+        logoutBtn.style.display = "block";
+      }
+    });
+
+    logoutBtn.addEventListener("click", async () => {
+      await signOut(auth);
+      window.location.href = "login.html";
+    });
+  </script>
+
+</body>
+</html>
