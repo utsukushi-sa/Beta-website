@@ -160,6 +160,12 @@ onAuthStateChanged(auth, async (user)=>{
     verifyWarning.textContent = "";
   }
 });
+if(user){
+  console.log("Email Verified:", user.emailVerified);
+  await user.reload();
+  console.log("Email Verified na reload:", user.emailVerified);
+}
+
 
 /* -----------------------------
    ⭐ UITLOGGEN
