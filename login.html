@@ -55,10 +55,26 @@
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
+  updateProfile, 
+  signInWithEmailAndPassword, 
+  sendEmailVerification, 
+  sendPasswordResetEmail, 
+  signOut, 
+  onAuthStateChanged 
+} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
-/* 🔥 Vul hier jouw Firebase config in */
+import { 
+  getFirestore, 
+  doc, 
+  setDoc, 
+  serverTimestamp 
+} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+
+/* 🔥 JOUW FIREBASE CONFIG */
 const firebaseConfig = {
    apiKey: "AIzaSyAh2nx8hk3VTqRIpIWvAOUYfEb_mIEb0-s",
    authDomain: "beta-site-21f67.firebaseapp.com",
@@ -73,6 +89,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+
+/* ELEMENTS */
 const signupForm = document.getElementById("signup-form");
 const loginForm = document.getElementById("login-form");
 const resetPassBtn = document.getElementById("reset-pass-btn");
@@ -82,100 +100,113 @@ const welcome = document.getElementById("welcome");
 const verifyWarning = document.getElementById("verify-warning");
 const logoutBtn = document.getElementById("logout-btn");
 
-/* -----------------------------
-   ⭐ REGISTRATIE
------------------------------ */
-signupForm.addEventListener("submit", async (e)=>{
+
+
+/* ⭐ REGISTRATIE ------------------------------------------------------------ */
+signupForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const name = document.getElementById("signup-name").value;
   const email = document.getElementById("signup-email").value;
   const pass = document.getElementById("signup-pass").value;
 
   try {
-    const cred = await createUserWithEmailAndPassword(auth,email,pass);
-    await updateProfile(cred.user,{displayName:name});
-    await setDoc(doc(db,"users",cred.user.uid),{
-      name:name,
-      email:email,
+    const cred = await createUserWithEmailAndPassword(auth, email, pass);
+    await updateProfile(cred.user, { displayName: name });
+
+    await setDoc(doc(db, "users", cred.user.uid), {
+      name: name,
+      email: email,
       createdAt: serverTimestamp()
     });
-    
+
     await sendEmailVerification(cred.user);
-    alert("Account aangemaakt! Check je inbox voor verificatie.");
+    alert("Account aangemaakt! Check je inbox voor email verificatie.");
+
     signupForm.reset();
-  } catch(err){ alert("Fout: "+err.message);}
-});
-
-/* -----------------------------
-   ⭐ INLOGGEN
------------------------------ */
-loginForm.addEventListener("submit", async (e)=>{
-  e.preventDefault();
-  const email = document.getElementById("login-email").value;
-  const pass = document.getElementById("login-pass").value;
-  try {
-    await signInWithEmailAndPassword(auth,email,pass);
-    loginForm.reset();
-  } catch(err){ alert("Inlog fout: "+err.message);}
-});
-
-/* -----------------------------
-   ⭐ WACHTWOORD RESET
------------------------------ */
-resetPassBtn.addEventListener("click", async ()=>{
-  const email = prompt("Voer je email in:");
-  if(!email) return;
-  try{
-    await sendPasswordResetEmail(auth,email);
-    alert("Reset e-mail verstuurd! Check je inbox.");
-  } catch(err){ alert("Fout: "+err.message);}
-});
-
-/* -----------------------------
-   ⭐ CHECK EMAIL VERIFICATIE
------------------------------ */
-checkVerificationBtn.addEventListener("click", async ()=>{
-  const user = auth.currentUser;
-  if(user){
-    await user.reload(); // refresh verificatie status
-    if(user.emailVerified){
-      alert("Je e-mail is geverifieerd!");
-      location.reload();
-    } else{
-      alert("Nog steeds niet geverifieerd, check je inbox.");
-    }
+  } catch (err) {
+    alert("Fout: " + err.message);
   }
 });
 
-/* -----------------------------
-   ⭐ USER STATUS
------------------------------ */
-onAuthStateChanged(auth, async (user)=>{
-  if(user){
+
+
+/* ⭐ INLOGGEN ------------------------------------------------------------ */
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("login-email").value;
+  const pass = document.getElementById("login-pass").value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, pass);
+    loginForm.reset();
+  } catch (err) {
+    alert("Inlog fout: " + err.message);
+  }
+});
+
+
+
+/* ⭐ WACHTWOORD RESET ------------------------------------------------------------ */
+resetPassBtn.addEventListener("click", async () => {
+  const email = prompt("Voer je email in:");
+  if (!email) return;
+
+  try {
+    await sendPasswordResetEmail(auth, email);
+    alert("Wachtwoord reset e-mail verstuurd!");
+  } catch (err) {
+    alert("Fout: " + err.message);
+  }
+});
+
+
+
+/* ⭐ VERIFICATIE CHECK ------------------------------------------------------------ */
+checkVerificationBtn.addEventListener("click", async () => {
+  const user = auth.currentUser;
+  if (!user) return alert("Je bent niet ingelogd.");
+
+  await user.reload();
+
+  if (user.emailVerified) {
+    alert("✔ Je e-mail is succesvol geverifieerd!");
+    location.reload();
+  } else {
+    alert("❗ Je e-mail is nog niet geverifieerd. Check je inbox.");
+  }
+});
+
+
+
+/* ⭐ USER STATE ------------------------------------------------------------ */
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
     await user.reload();
+
     userInfo.style.display = "block";
-    welcome.textContent = "Welkom, "+(user.displayName||user.email);
-    verifyWarning.textContent = user.emailVerified?"":"⚠ Gelieve je e-mail te verifiëren.";
-  } else{
+    welcome.textContent = "Welkom, " + (user.displayName || user.email);
+
+    verifyWarning.textContent = user.emailVerified
+      ? ""
+      : "⚠ Gelieve je e-mail te verifiëren.";
+
+  } else {
     userInfo.style.display = "none";
     welcome.textContent = "";
     verifyWarning.textContent = "";
   }
 });
-if(user){
-  console.log("Email Verified:", user.emailVerified);
-  await user.reload();
-  console.log("Email Verified na reload:", user.emailVerified);
-}
 
 
-/* -----------------------------
-   ⭐ UITLOGGEN
------------------------------ */
-logoutBtn.addEventListener("click", async ()=>{
+
+/* ⭐ UITLOGGEN ------------------------------------------------------------ */
+logoutBtn.addEventListener("click", async () => {
   await signOut(auth);
 });
 </script>
+
 
 </body>
 </html>
