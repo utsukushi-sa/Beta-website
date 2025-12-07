@@ -5,15 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="login.css">
 <title>Login / Registratie</title>
-
 </head>
 <body>
 
- <header>
-  <!--navigatie-->
+<header>
   <ul class="nav">
     <li><a href="index.html">main parts</a></li>
-    <li><a href="kappen.html">kappen </a></li>
+    <li><a href="kappen.html">kappen</a></li>
     <li><a href="stuur.html">stuur</a></li>
     <li><a href="onderhoud.html">onderhoud</a></li>
     <li><a href="kleine-details.html">kleine details</a></li>
@@ -22,9 +20,7 @@
     <li><a class="active" href="login.html">Login</a></li>
     <li><a href="protected.html">protected</a></li>
   </ul>
-
-
-  </header>
+</header>
 
 <h1>Login / Registratie</h1>
 
@@ -73,8 +69,7 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-
-/* 🔥 JOUW FIREBASE CONFIG */
+/* 🔥 Firebase Config */
 const firebaseConfig = {
    apiKey: "AIzaSyAh2nx8hk3VTqRIpIWvAOUYfEb_mIEb0-s",
    authDomain: "beta-site-21f67.firebaseapp.com",
@@ -89,7 +84,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
- /* Get DOM Elements */
+/* DOM Elements */
 const signupForm = document.getElementById("signup-form");
 const loginForm = document.getElementById("login-form");
 const resetPassBtn = document.getElementById("reset-pass-btn");
@@ -127,7 +122,6 @@ signupForm.addEventListener("submit", async (e) => {
   }
 });
 
-
 /* ⭐ INLOGGEN */
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -143,7 +137,6 @@ loginForm.addEventListener("submit", async (e) => {
   }
 });
 
-
 /* ⭐ WACHTWOORD RESET */
 resetPassBtn.addEventListener("click", async () => {
   const email = prompt("Voer je email in:");
@@ -157,8 +150,7 @@ resetPassBtn.addEventListener("click", async () => {
   }
 });
 
-
-/* ⭐ VERIFICATIE CONTROLEREN */
+/* ⭐ VERIFICATIE CHECK */
 checkVerificationBtn.addEventListener("click", async () => {
   const user = auth.currentUser;
   if (!user) return alert("Je bent niet ingelogd.");
@@ -173,10 +165,10 @@ checkVerificationBtn.addEventListener("click", async () => {
   }
 });
 
-
-/* ⭐ USER STATE */
+/* ⭐ USER STATE FIX (BELANGRIJK!) */
 onAuthStateChanged(auth, async (user) => {
   if (user) {
+    // 🔥 FIX: altijd up-to-date user info ophalen
     await user.reload();
 
     userInfo.style.display = "block";
@@ -193,14 +185,11 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-
 /* ⭐ UITLOGGEN */
 logoutBtn.addEventListener("click", async () => {
   await signOut(auth);
 });
 </script>
-
-
 
 </body>
 </html>
