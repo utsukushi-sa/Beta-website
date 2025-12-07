@@ -89,6 +89,15 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+ /* Get DOM Elements */
+const signupForm = document.getElementById("signup-form");
+const loginForm = document.getElementById("login-form");
+const resetPassBtn = document.getElementById("reset-pass-btn");
+const checkVerificationBtn = document.getElementById("check-verification");
+const userInfo = document.getElementById("user-info");
+const welcome = document.getElementById("welcome");
+const verifyWarning = document.getElementById("verify-warning");
+const logoutBtn = document.getElementById("logout-btn");
 
 /* ⭐ REGISTRATIE */
 signupForm.addEventListener("submit", async (e) => {
